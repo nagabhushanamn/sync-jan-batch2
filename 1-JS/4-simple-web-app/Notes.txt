@@ -1,0 +1,113 @@
+
+
+what .js-lang can do with web-pages in browser-envi?
+
+
+using browser provided web-apis, 
+.js-program can do any dynamic-actions on web-page
+
+
+browser provided APIs ==> w3c recommendations
+
+e.g  DOM, XHR, Timer, ...
+
+
+using DOM API
+-------------
+ ---> can create,retreive,update,delete HTML elements
+ ---> can change element's inner text/html content
+ ---> can change element's attributes/properties
+ ---> can change element's style
+ ---> can listen events on elements
+ ---> can validate form-fields before submit
+ ---> can create rich UI components
+ ..
+
+using XHR
+-----------
+ ---> can comminicate with server-side async, update resp in same-page
+
+using Timer API
+---------------
+ ---> can execute any action on time timeout/interval
+
+
+
+HTML5 APIs
+-----------
+ref:
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+
+
+
+//---------------------------------------------------------
+
+
+problems with plain-js with browser APIs
+------------------------------------------
+
+ ==> browser compatability
+ ==> performance issues  ( i.e DOM Manipulation )
+ ==> memory management ( i.e clean un-used DOM elements)
+ ==> data-binding manual
+ ==> code organization is difficult
+
+
+    soln:
+
+    using third-party's .js lib & F.Ws
+
+
+    -> jQuery
+
+    MVC & MVVM based arc
+    -------------
+    -> knockout
+    -> AngularJS 1.x
+    -> EmberJS
+    -> Backbone
+    ...
+    UI toolkits
+    -------------
+    -> DOJO
+    -> ExtJS
+
+
+-----------------------------------------------------
+
+component based UI lib & F.Ws
+------------------------------
+
+ ==> React.js  v16 : facebook
+ ==> Angular v5 
+ ==> Vue
+ ==> PolymerJS
+ ...
+
+ ---------------------------------------------------
+
+
+.js-lang
+
+  ==> single-threaded lang , can do concurrent actions
+  ==> Non-Blocking IO
+
+
+  ---------------------------------------------------
+
+  browser e.g chrome 
+
+  1. JS-runtime :- ECAMScript spec
+        a. single-call-stack  ==> to execute contexts
+        b. heap               ==> to keep objects
+  2. Web APIs   :- w3c recommendations
+  3. Event-Queue
+  4. Event-Loop
+
+  ----------------------------------------------  
+
+
+
+
+
+

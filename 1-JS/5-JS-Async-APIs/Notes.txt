@@ -1,0 +1,16 @@
+
+by default , after browser-event ,
+all event-handlers always executes async
+
+
+//--------------------------------------------
+
+
+
+Async APIs
+------------
+
+    - promise API  ( es6 )
+    - RxJS 
+
+-----------------------------------------------

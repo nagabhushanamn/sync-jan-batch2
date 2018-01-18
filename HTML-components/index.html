@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> HTML components</h1>
+    <hr/>
+
+    <div>
+        <input id="inp1" type="text" onchange="handleChange()" />
+        <br/>
+        <br/> current-count :
+        <span id="spanEle"></span>
+    </div>
+
+
+    <script>
+        let inp1 = document.getElementById('inp1');
+        let spanEle = document.getElementById('spanEle');
+
+        let n = 0;
+        setInterval(() => {
+            n++;
+            inp1.value = n;
+            inp1.dispatchEvent(new CustomEvent('change'))
+        }, 2000);
+
+        function handleChange() {
+            spanEle.innerText = n;
+        }
+
+    </script>
+
+</body>
+
+</html>

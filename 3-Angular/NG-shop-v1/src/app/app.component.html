@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="page-header">{{title}}</div>
+
+  <div class="list-group">
+    <div class="list-group-item" *ngFor="let product of products; let idx=index">
+      <div class="row">
+        <div class="col-xs-4 col-sm-3 col-md-3">
+          <img [src]="product.image" class="img-responsive" />
+        </div>
+        <div class="col-xs-8 col-sm-9 col-md-9">
+          <span class="badge">{{idx+1}}</span>
+          <h4>{{product.name}}</h4>
+          <h5>{{product.price}}</h5>
+          <p>{{product.description}}</p>
+          <button *ngIf="product.canBuy" class="btn btn-sm btn-primary">buy</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

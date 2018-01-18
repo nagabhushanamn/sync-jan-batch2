@@ -1,0 +1,12 @@
+
+
+HTML tag/element/component
+---------------------------
+
+e.g
+
+<input />    <====  HTMLInputElement
+
+
+  - props   ( e.g id, class , type , value,.......)
+  - state   ( e.g value )

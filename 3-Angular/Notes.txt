@@ -1,0 +1,27 @@
+
+
+NG - data-binding
+--------------------
+
+ 1. interpolation
+
+    syntax:  {{}}
+
+  2. property binding
+
+    syntax : <element [prop]="expr"/>
+
+
+
+====================================================================
+
+
+NG - directives
+---------------------
+
+ 1. component   ==> directive + template   : new UI 
+ 2. structural  ==> to change DOM structure
+
+    e.g   ngFor,ngIf,....
+
+ 3. attribute   ==> to change attributes

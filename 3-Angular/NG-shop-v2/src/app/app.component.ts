@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title: string = 'NG-shop-v1';
-  tab: number = 1;
+  title: string = 'NG-shop-v2';
+  cart: Array<any> = [];
   products: Array<any> = [
     {
       name: 'Laptop',
@@ -29,13 +29,8 @@ export class AppComponent {
     }
   ]
 
-
-  hanldeTabChange($event: any, tabIdx: number) {
-    this.tab = tabIdx;
+  addToCart(event) {
+    this.cart.push(event.product);
   }
-  isTabSelected(tabIdx: number) {
-    return this.tab === tabIdx;
-  }
-
 
 }

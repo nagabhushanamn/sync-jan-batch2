@@ -16,7 +16,13 @@
         </ul>
         <div *ngIf="isTabSelected(1)" class="panel"><p>{{product.description}}</p></div>
         <div *ngIf="isTabSelected(2)" class="panel"><p>Not Yet</p></div>
-        <div *ngIf="isTabSelected(3)" class="panel"><p>None Yet</p></div>
+        <div *ngIf="isTabSelected(3)" class="panel">
+          <div *ngFor="let review of product.reviews">
+          <app-review  [review]="review"></app-review>
+          </div>
+          <hr/>
+          <app-review-form [product]="product"></app-review-form>
+        </div>
     </section>
   </div>
   <!-- <pre>{{product|json}}</pre> -->

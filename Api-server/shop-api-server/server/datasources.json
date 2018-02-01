@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongods": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://user1:user1@ds015760.mlab.com:15760/cap-shop-db",
+    "database": "can-shop-db",
+    "password": "",
+    "name": "mongods",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

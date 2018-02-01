@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product',
@@ -16,15 +17,23 @@ export class ProductComponent implements OnInit {
   @Output() buy = new EventEmitter();
 
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
   }
 
-
   hanldeTabChange($event: any, tabIdx: number) {
     this.tab = tabIdx;
+
+    if (tabIdx === 3) {
+      this.productService.loadReviews(this.product.id)
+        .subscribe(reviews => {
+          this.product.reviews = reviews
+        });
+    }
+
   }
+
   isTabSelected(tabIdx: number) {
     return this.tab === tabIdx;
   }

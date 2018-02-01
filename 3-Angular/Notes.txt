@@ -35,3 +35,37 @@ NG - directives
  NG - pipes
  -----------
  
+====================================================================
+
+ NG - directives
+
+    -> component ==> New UI/template`
+    -> structural => modify existong template/DOM
+    -> attribute 
+
+----------------------------------------------------------
+
+
+NG - services
+
+   why we need ?
+
+   ==> to hold shared data/logic for many components
+
+   imp-points:
+
+   ==> by defautt singletons   
+   ==> injected by F.W thru constructor
+
+   ----------------
+
+  ==> all services must be registred into providers/injectors
+
+     2-ways
+
+     ==> module-level
+     ==> component-level
+
+  ------------------------------------------------   
+  mongodb://user1:user1@ds015760.mlab.com:15760/cap-shop-db
+  ------------------------------------------------   

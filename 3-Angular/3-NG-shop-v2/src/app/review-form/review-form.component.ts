@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-review-form',
@@ -13,7 +14,7 @@ export class ReviewFormComponent implements OnInit {
   isOpen: boolean = false
   reviewForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private productService: ProductService) { }
 
   ngOnInit() {
     this.reviewForm = this.fb.group({
@@ -27,8 +28,16 @@ export class ReviewFormComponent implements OnInit {
     this.isOpen = !this.isOpen
   }
   submitNewReview(event) {
-    this.product.reviews.push(this.reviewForm.value);
-    this.toggleForm();
+    if (this.reviewForm.valid) {
+      this.productService.submitNewReview(this.product.id, this.reviewForm.value)
+        .subscribe(review => {
+          this.product.reviews.push(this.reviewForm.value);
+          this.reviewForm.reset();
+          this.toggleForm();
+        })
+
+    }
+
   }
 
 

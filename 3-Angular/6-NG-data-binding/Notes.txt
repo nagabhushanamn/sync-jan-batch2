@@ -1,0 +1,38 @@
+
+
+
+NG-data-binding  ref : https://pascalprecht.github.io/slides/angular-2-change-detection-explained/#/
+-------------------------------------------------------------------------------------------------------
+	by default ,
+	==> every NG-components has its own change-detectors ( compare current & prev state )
+	==> 2 strategies for change detections
+	      a.default --> mutable & immutable properties
+	      b.onPush  --> immutable properties   , if references same , NG ignore change-detection in whole sub-tree
+
+	 changeDetector Methods
+	 	.marForCheck()  ==>  when component uses onPush strategy , if some properties are changed , 
+	 	                     trigger change-detection on own tree till root component
+	 	.detach()
+	 	.reattach()
+	 	
+	 	if change-detection not happening i.e No data-binding on that component     
+	      
+    ----------------------------------------	---------------------------------------------------   
+     Zone
+     
+     ==> by default NG runs all async operations in zone,
+         when code exits zone, change detection kick started from root-component every-time
+     
+     
+     imp-note :
+     
+	     expensive async-operation can perform out-side zone , at end/middle , we can run code in zone for change detection
+     
+    ------------------------------------------------------------------------------------------- 
+     
+     
+     
+     
+     
+           
+	      

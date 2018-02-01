@@ -1,0 +1,20 @@
+
+
+<div class="container well">
+	<div class="page-header">
+		<p>NG - change detection & data-binding
+	</div>
+
+	<button class="btn btn-success" (click)="processWithinAngularZone()">
+		start in zone : <span class="badge">{{progress1}} %</span>
+	</button>
+	<button class="btn btn-danger" (click)="processOutsideAngularZone()">
+		start outside zone : <span class="badge">{{progress2}} %</span>
+	</button>
+	<hr />
+	<button class="btn btn-default" (click)="changePrice()">increment product's price</button>
+	<hr />
+
+	<app-product [product]="product"></app-product>
+
+</div>

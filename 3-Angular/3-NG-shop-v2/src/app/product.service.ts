@@ -5,13 +5,13 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class ProductService {
 
-  apiUrl: string = "http://0.0.0.0:8080/api/products";
+  apiUrl: string = "http://0.0.0.0:3000/api/products";
 
   constructor(private _http: Http) { }
 
   loadAllProducts() {
     return this._http.get(this.apiUrl)
-      .map(resp => resp.json().products)
+      .map(resp => resp.json())
   }
 
   loadReviews(prodId) {
